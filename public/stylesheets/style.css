@@ -26,7 +26,7 @@ body {
 
 nav {
   background-color: #242424;
-  font-size: 1.6rem;
+  font-size: 16px;
   display: flex;
   justify-content: center;
 }
@@ -39,5 +39,60 @@ main {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p, label, li, button, input {
+  font-size: 18px;
+}
+
+label {
+  font-weight: bold;
+}
+
+section {
+  padding: 50px;
+}
+
+a {
+  color: white;
+}
+
+pre {
+  font-size: 14px;
+}
+
+nav > a {
+  margin: 10px 30px;
+  text-decoration: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin: 16px 0;
+}
+
+.link {
+  padding: 10px 0;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.profile-avatar {
+  margin-top: 50px;
 }
