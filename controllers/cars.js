@@ -5,7 +5,7 @@ function index(req, res) {
   .then(cars => {
     res.render('cars/index', {
       cars,
-      title: "All CARS"
+      title: "All Cars"
     })
   })
   .catch(err => {
@@ -32,8 +32,24 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Car.findById(req.params.id)
+  .populate("owner")
+  .then(car => {
+    res.render('cars/show', {
+      car,
+      title: "Car Show"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/cars')
+  })
+}
+
 export {
   index,
   newCar as new,
   create,
+  show,
 }

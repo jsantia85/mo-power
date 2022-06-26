@@ -7,8 +7,11 @@ const router = Router()
 //GET localhost:3000/cars
 router.get('/', carsCtrl.index)
 
-//POST localhost:3000/cars/new
+//GET localhost:3000/cars/new
 router.get('/new', isLoggedIn, carsCtrl.new)
+
+//GET localhost:3000/cars/:id
+router.get('/:id', carsCtrl.show)
 
 //POST localhost:3000/cars
 router.post('/', carsCtrl.create)

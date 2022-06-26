@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cars/show.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div>Bought For: </div>
+    <div><%= car.boughtFor %></div>
+    <div>Year: </div>
+    <div><%= car.year %></div>
+    <div>Make: </div>
+    <div><%= car.make %></div>
+    <div>Model: </div>
+    <div><%= car.model %></div>
+    <a href="/cars/<%= car._id %>/edit">
+      <button id="edit-btn">Edit Car</button>
+    </a>
+  </section>
+    </section>
+</main>
+  
+<%- include('../partials/footer') %>
