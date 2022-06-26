@@ -47,9 +47,24 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Car.findById(req.params.id)
+  .then(car => {
+    res.render('cars/edit', {
+      car,
+      title: "Edit Car"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/tacos')
+  })
+}
+
 export {
   index,
   newCar as new,
   create,
   show,
+  edit,
 }

@@ -13,6 +13,9 @@ router.get('/new', isLoggedIn, carsCtrl.new)
 //GET localhost:3000/cars/:id
 router.get('/:id', carsCtrl.show)
 
+//GET localhost:3000/cars/:id/edit
+router.get('/:id/edit', isLoggedIn, carsCtrl.edit)
+
 //POST localhost:3000/cars
 router.post('/', carsCtrl.create)
 
