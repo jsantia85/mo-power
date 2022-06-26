@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 
+const Schema = mongoose.Schema
+
 const carSchema = new mongoose.Schema({
   boughtFor: String,
   year: String,

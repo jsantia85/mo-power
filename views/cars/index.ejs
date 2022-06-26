@@ -1,0 +1,36 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cars/index.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>All Cars</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Bought For</th>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Build</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% cars.forEach(car => { %>
+        <tr>
+          <td><%= car.boughtFor %></td>
+          <td><%= flight.year %></td>
+          <td><%= flight.make %></td>
+          <td><%= flight.model %></td>
+          <td><a href="/cars/<%= car._id %>">Build</a></td>
+          <td>
+            <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+              <button>X</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/footer') %>
