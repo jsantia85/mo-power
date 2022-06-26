@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/cars/edit.css" />
 <%- include('../partials/nav') %>
 
-<section>
+<main>
   <h1>Edit the Car</h1>
   <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
     <label for="boughtFor-input">Bought For:</label>
@@ -14,7 +14,7 @@
     <label for="model-input">Model:</label>
     <input type="text" name="model" id="model-input">
     <button type="submit">Save Car</button>
-    </form>
-</section>
+  </form>
+</main>
 
 <%- include('../partials/footer') %>
