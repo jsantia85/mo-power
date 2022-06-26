@@ -1,14 +1,17 @@
 import mongoose from 'mongoose'
 
-const profileSchema = new mongoose.Schema({
-  name: String,
-  avatar: String,
+const carSchema = new mongoose.Schema({
+  boughtFor: String,
+  year: String,
+  make: String,
+  model: String,
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
 }, {
   timestamps: true
 })
 
-const Profile = mongoose.model('Profile', profileSchema)
+const Car = mongoose.model('Car', carSchema)
 
 export {
-  Profile
+  Car
 }
