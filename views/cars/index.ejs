@@ -18,9 +18,9 @@
       <% cars.forEach(car => { %>
         <tr>
           <td><%= car.boughtFor %></td>
-          <td><%= flight.year %></td>
-          <td><%= flight.make %></td>
-          <td><%= flight.model %></td>
+          <td><%= car.year %></td>
+          <td><%= car.make %></td>
+          <td><%= car.model %></td>
           <td><a href="/cars/<%= car._id %>">Build</a></td>
           <td>
             <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">

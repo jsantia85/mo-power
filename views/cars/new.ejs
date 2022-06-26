@@ -1,0 +1,20 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cars/new.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/cars" method="POST">
+    <label for="boughtFor-input">Bought For:</label>
+    <input type="text" name="boughtFor" id="boughtFor-input">
+    <label for="year-input">Year:</label>
+    <input type="text" name="year" id="release-year-input">
+    <label for="make-input">Make:</label>
+    <input type="text" name="make" id="make-input">
+    <label for="model-input">Model:</label>
+    <input type="text" name="model" id="model-input">
+    <button type="submit">Add Car</button>
+  </form>
+</main>
+
+<%- include("../partials/footer") %>

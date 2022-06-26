@@ -6,6 +6,7 @@
   <nav>
     <a href="/cars">ALL CARS</a>
     <% if (user) { %>
+      <a href="/cars/new" <%- title === 'Add Car' ? 'class="active"' : '' %>>ADD CAR</a>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
