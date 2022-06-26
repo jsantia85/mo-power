@@ -13,9 +13,11 @@
     <div><%= car.make %></div>
     <div>Model: </div>
     <div><%= car.model %></div>
-    <a href="/cars/<%= car._id %>/edit">
-      <button id="edit-btn">Edit Car</button>
-    </a>
+    <% if (car.owner.equals(user?.profile._id)) { %>
+      <form action="/cars/<%= car._id %>/edit" method="GET">
+        <button id="edit-btn" class="btn" type="submit">Edit Car</button>
+      </form>
+    <% } %>
   </section>
     </section>
 </main>
