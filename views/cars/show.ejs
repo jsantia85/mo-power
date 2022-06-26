@@ -15,11 +15,13 @@
     <div><%= car.model %></div>
     <% if (car.owner.equals(user?.profile._id)) { %>
       <form action="/cars/<%= car._id %>/edit" method="GET">
-        <button id="edit-btn" class="btn" type="submit">Edit Car</button>
+        <button id="btn" class="btn" type="submit">Edit Car</button>
+      </form>
+      <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+        <button id="btn" class="btn" type="submit">Delete Car</button>
       </form>
     <% } %>
   </section>
-    </section>
 </main>
   
 <%- include('../partials/footer') %>

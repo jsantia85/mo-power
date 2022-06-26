@@ -22,11 +22,6 @@
           <td><%= car.make %></td>
           <td><%= car.model %></td>
           <td><a href="/cars/<%= car._id %>">Build</a></td>
-          <td>
-            <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
-              <button>X</button>
-            </form>
-          </td>
         </tr>
       <% }) %>
     </tbody>
