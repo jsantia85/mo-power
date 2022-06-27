@@ -19,6 +19,9 @@ router.get('/:id/edit', isLoggedIn, carsCtrl.edit)
 //POST localhost:3000/cars
 router.post('/', carsCtrl.create)
 
+//PUT localhost:3000/cars/:id
+router.put('/:id', isLoggedIn, carsCtrl.update)
+
 export {
   router
 }
