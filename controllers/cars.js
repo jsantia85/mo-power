@@ -70,12 +70,30 @@ function update(req, res) {
         res.redirect(`/cars/${car._id}`)
       })
     } else {
-      throw new Error ('Not authorized, only owner of car can edit.')
+      throw new Error ('Not authorized, only owner of the car can edit this car.')
     }
   })
   .catch(err => {
     console.log(err)
     res.redirect(`/tacos`)
+  })
+}
+
+function deleteCar(req, res) {
+  Car.findById(req.params.id)
+  .then(car => {
+    if (car.owner.equals(req.user.profile._id)) {
+      car.delete()
+      .then(() => {
+        res.redirect('/cars')
+      })
+    } else {
+      throw new Error ('Not authorized, only owner of the car can delete this car.')
+    }   
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/cars')
   })
 }
 
@@ -86,4 +104,5 @@ export {
   show,
   edit,
   update,
+  deleteCar as delete,
 }
