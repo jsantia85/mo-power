@@ -97,8 +97,28 @@ function deleteCar(req, res) {
   })
 }
 
-function addMod(req, res) {
-
+function createMod(req, res) {
+  req.body.worthIt = !!req.body.worthIt
+  req.body.moPower = !!req.body.moPower
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+	}
+  Car.findById(req.params.id)
+  .then(car => {
+    if (car.owner.equals(req.user.profile._id)) {
+      car.mods.push(req.body)
+      car.save()
+      .then(() => {
+        res.redirect(`/cars/${car._id}`)
+      })
+    } else {
+      throw new Error ('Not authorized, only owner of the car can add a mod.')
+    }  
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/cars')
+  })
 }
 
 export {
@@ -109,5 +129,5 @@ export {
   edit,
   update,
   deleteCar as delete,
-  addMod,
+  createMod,
 }

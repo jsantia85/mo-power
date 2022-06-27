@@ -20,7 +20,7 @@ router.get('/:id/edit', isLoggedIn, carsCtrl.edit)
 router.post('/', carsCtrl.create)
 
 //POST localhost:3000/cars/:id/mods
-router.post('/:id/mods', isLoggedIn, carsCtrl.addMod)
+router.post('/:id/mods', isLoggedIn, carsCtrl.createMod)
 
 //PUT localhost:3000/cars/:id
 router.put('/:id', isLoggedIn, carsCtrl.update)
