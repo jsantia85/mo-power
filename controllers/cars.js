@@ -97,6 +97,10 @@ function deleteCar(req, res) {
   })
 }
 
+function addMod(req, res) {
+
+}
+
 export {
   index,
   newCar as new,
@@ -105,4 +109,5 @@ export {
   edit,
   update,
   deleteCar as delete,
+  addMod,
 }
