@@ -22,6 +22,20 @@
       </form>
     <% } %>
   </section>
+  <h2>Mods</h2>
+  <form id="add-mod-form" action="/cars/<%= car._id %>/mods" method="POST">
+    <label for="name-input">Name of Mod:</label>
+    <input type="text" name="name" id="name-input">
+    <label for="description-input">Description:</label>
+    <input type="text" name="description" id="description-input">
+    <label for="price-input">Price:</label>
+    <input type="text" name="price" id="price-input">
+    <label for="worthIt-checkbox">Worth It:</label>
+    <input type="checkbox" name="worthIt" checked id="worthIt-checkbox">
+    <label for="moPower-checkbox">MoPower:</label>
+    <input type="checkbox" name="moPower" checked id="moPower-checkbox">
+    <button type="submit">Add Mod</button>
+  </form>
 </main>
   
 <%- include('../partials/footer') %>
