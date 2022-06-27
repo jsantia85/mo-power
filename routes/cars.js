@@ -22,6 +22,9 @@ router.post('/', carsCtrl.create)
 //PUT localhost:3000/cars/:id
 router.put('/:id', isLoggedIn, carsCtrl.update)
 
+//DELETE localhost:3000/cars/:id
+router.delete('/:id', isLoggedIn, carsCtrl.delete)
+
 export {
   router
 }
