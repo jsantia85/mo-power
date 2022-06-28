@@ -6,7 +6,7 @@ The following is the link to the [app](https://mo-power.herokuapp.com/) and the 
 
 
 ## Screenshot:
-![This is an image](images/screen-shots/MoPower-Landing-Page.png)
+![This is an image](public/images/screen-shots/MoPower-Landing-Page.png)
 
 ## Technologies Used:
 - Mongoose
