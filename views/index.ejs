@@ -2,7 +2,10 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Welcome to MoPower, <%= user ? user.profile.name : "Driver!" %>!</h1>
+  <div class="banner-card">
+    <img src="images/general/chris-hristov-fVDVGfir-J0-unsplash.jpg" alt="cars" id="homeImage">
+    <div class="banner-text">
+      <h1>Welcome to MoPower, <%= user ? user.profile.name : "Driver!" %>!</h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
@@ -11,6 +14,8 @@
       />
     </div>
   <% } %>
+    </div>
+  </div>
 </main>
 
 <%- include('./partials/footer') %>
