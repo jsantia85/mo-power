@@ -114,11 +114,11 @@ nav > a {
   left: 0;
 }
 
-.banner-card {
+.intro-content {
   position: relative;
 }
 
-.banner-text {
+.intro-text {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -133,11 +133,11 @@ nav > a {
     display: none;
   }
   
-  .banner-card {
+  .intro-content {
     position: relative;
   }
   
-  .banner-text {
+  .intro-text {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -146,5 +146,4 @@ nav > a {
     left: 50%;
     transform: translateX(-50%);
   }
-  
 }

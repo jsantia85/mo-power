@@ -2,9 +2,9 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <div class="banner-card">
+  <div class="intro-content">
     <img src="images/general/chris-hristov-fVDVGfir-J0-unsplash.jpg" alt="cars" id="homeImage">
-    <div class="banner-text">
+    <div class="intro-text">
       <h1>Welcome to MoPower, <%= user ? user.profile.name : "Driver!" %>!</h1>
       <% if (user?.profile.avatar) { %>
         <div>
