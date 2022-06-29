@@ -18,4 +18,7 @@ The following is the link to the [app](https://mo-power.herokuapp.com/) and the 
 - Favicon.io
 - Google Fonts
 
+## Credits:
+- Background image used on landing page by Chris Hristov at [Unsplash](https://unsplash.com/@itschrisyo)
+
 ## Next Steps: 
