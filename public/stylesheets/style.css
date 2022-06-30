@@ -68,10 +68,6 @@ section {
   padding: 50px;
 }
 
-a {
-  color: white;
-}
-
 pre {
   font-size: 14px;
 }
@@ -135,6 +131,9 @@ nav > a {
   font-size: xx-large;
 }
 
+a {
+  color: white;
+}
 @media only screen and (max-width: 1066px) {
   #homeImage {
     display: none;
