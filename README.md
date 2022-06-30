@@ -22,7 +22,7 @@ The following is the link to the [app](https://mo-power.herokuapp.com/) and the 
 - Background image used on landing page by Chris Hristov at [Unsplash](https://unsplash.com/@itschrisyo).
 
 ## Next Steps: 
-- AAU, I want to be able to click on an icon in the left side of the nav bar and be taken back to the main page.
+- AAU and someone that is signed in, I should be able to see all the cars that someone owns on the show page of their profile.
 - AAU and owner of a mod, I should be able to delete it from my show page.
 - AAU, I should be able to leave comments on the show view of another users build page.
 - AAU and owner of the car, I should be able to delete the comments of other users that I do not want to see.
