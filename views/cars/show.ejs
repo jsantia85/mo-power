@@ -26,11 +26,11 @@
   <% if (car.owner.equals(user?.profile._id)) { %>
     <form id="add-mod-form" action="/cars/<%= car._id %>/mods" method="POST">
       <label for="name-input">Name of Mod:</label>
-      <input type="text" name="name" id="name-input">
+      <input type="text" name="name" id="name-input" autocomplete="off">
       <label for="description-input">Description:</label>
-      <input type="text" name="description" id="description-input">
+      <input type="text" name="description" id="description-input" autocomplete="off">
       <label for="price-input">Price:</label>
-      <input type="text" name="price" id="price-input">
+      <input type="text" name="price" id="price-input" autocomplete="off">
       <label for="worthIt-checkbox">Worth It:</label>
       <input type="checkbox" name="worthIt" checked id="worthIt-checkbox">
       <label for="moPower-checkbox">MoPower:</label>
