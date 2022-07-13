@@ -4,24 +4,27 @@
 
 <main>
   <h1><%= title %></h1>
-  <section>
-    <div>Bought For: </div>
-    <div><%= car.boughtFor %></div>
-    <div>Year: </div>
-    <div><%= car.year %></div>
-    <div>Make: </div>
-    <div><%= car.make %></div>
-    <div>Model: </div>
-    <div><%= car.model %></div>
-    <% if (car.owner.equals(user?.profile._id)) { %>
-      <form action="/cars/<%= car._id %>/edit" method="GET">
-        <button id="btn" class="btn" type="submit">Edit Car</button>
-      </form>
-      <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
-        <button id="btn" class="btn" type="submit">Delete Car</button>
-      </form>
-    <% } %>
-  </section>
+    <section>
+      <img src="<%= car.pictureUrl %> " class="card-img-top" alt="Picture of Car.">
+      <div class="card text-center">
+          <div class="card-body">
+            <h3 class="card-title">
+              <%= car.year %>
+              <%= car.make %>
+              <%= car.model %>
+            </h3>
+            <h4>$<%= car.boughtFor %> </h4>
+            <% if (car.owner.equals(user?.profile._id)) { %>
+              <form action="/cars/<%= car._id %>/edit" method="GET">
+                <button id="btn" class="btn" type="submit">Edit Car</button>
+              </form>
+              <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+                <button id="btn" class="btn" type="submit">Delete Car</button>
+              </form>
+            <% } %>
+          </div>
+      </div>
+    </section>
   <h2>Mods</h2>
   <% if (car.owner.equals(user?.profile._id)) { %>
     <form id="add-mod-form" action="/cars/<%= car._id %>/mods" method="POST">

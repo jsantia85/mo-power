@@ -8,35 +8,6 @@ li {
   font-weight: bold;
 }
 
-table {
-  font-size: 20px;
-}
-
-table thead th {
-  padding: 5px;
-  border-bottom: 2px solid #2A272A;
-}
-
-table td {
-  padding: 10px;
-  text-align: center;
-}
-
-form * {
-  padding: 5px;
-  border-radius: 5px;
-}
-
-section {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 16px;
-}
-
-section div:nth-child(even) {
-  font-weight: bold;
-}
-
 #add-review-form {
   display: grid;
   grid-template-columns: auto auto;

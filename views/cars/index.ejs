@@ -10,11 +10,12 @@
         <img src="<%= car.pictureUrl %> " class="card-img-top" alt="Picture of Car.">
         <div class="card text-center">
             <div class="card-body">
-              <h5 class="card-title">
+              <h3 class="card-title">
                 <%= car.year %>
                 <%= car.make %>
                 <%= car.model %>
-              </h5>
+              </h3>
+              <h4>$<%= car.boughtFor %> </h4>
               <a href="/cars/<%= car._id %>" class="btn btn-primary">Build</a>
             </div>
         </div>
