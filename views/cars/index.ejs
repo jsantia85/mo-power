@@ -4,20 +4,23 @@
 
 <main>
   <h1>All Cars</h1>
-      <% cars.forEach(car => { %>
-        <div class="card" style="width: 18rem;">
-          <img src="<%= car.pictureUrl %> " class="card-img-top" alt="...">
-          <%=  %> 
-          <div class="card-body">
-            <h5 class="card-title">
-              <%= car.year %>
-              <%= car.make %>
-              <%= car.model %>
-            </h5>
-            <a href="/cars/<%= car._id %>" class="btn btn-primary">Build</a>
-          </div>
-        </div> 
-      <% }) %>
+  <div id="card-container">
+    <% cars.forEach(car => { %>
+      <div class="card" style="width: 18rem;">
+        <img src="<%= car.pictureUrl %> " class="card-img-top" alt="Picture of Car.">
+        <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= car.year %>
+                <%= car.make %>
+                <%= car.model %>
+              </h5>
+              <a href="/cars/<%= car._id %>" class="btn btn-primary">Build</a>
+            </div>
+        </div>
+      </div> 
+    <% }) %>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
