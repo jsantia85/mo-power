@@ -4,28 +4,20 @@
 
 <main>
   <h1>All Cars</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Bought For</th>
-        <th>Year</th>
-        <th>Make</th>
-        <th>Model</th>
-        <th>Build</th>
-      </tr>
-    </thead>
-    <tbody>
       <% cars.forEach(car => { %>
-        <tr>
-          <td><%= car.boughtFor %></td>
-          <td><%= car.year %></td>
-          <td><%= car.make %></td>
-          <td><%= car.model %></td>
-          <td><a href="/cars/<%= car._id %>">Build</a></td>
-        </tr>
+        <div class="card" style="width: 18rem;">
+          <img src="<%= car.pictureUrl %> " class="card-img-top" alt="...">
+          <%=  %> 
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= car.year %>
+              <%= car.make %>
+              <%= car.model %>
+            </h5>
+            <a href="/cars/<%= car._id %>" class="btn btn-primary">Build</a>
+          </div>
+        </div> 
       <% }) %>
-    </tbody>
-  </table>
 </main>
 
 <%- include('../partials/footer') %>

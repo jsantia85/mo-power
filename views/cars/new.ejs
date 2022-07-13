@@ -5,14 +5,16 @@
 <main>
   <h1><%= title %></h1>
   <form id="new-form" action="/cars" method="POST">
+    <label for="pictureUrl-input">Picture:</label>
+    <input type="text" name="pictureUrl" id="pictureUrl-input" autocomplete="off" placeholder="Please Insert URL of Car Picture">
     <label for="boughtFor-input">Bought For:</label>
-    <input type="text" name="boughtFor" id="boughtFor-input" autocomplete="off">
+    <input type="text" name="boughtFor" id="boughtFor-input" autocomplete="off" placeholder="$">
     <label for="year-input">Year:</label>
-    <input type="text" name="year" id="release-year-input" autocomplete="off">
+    <input type="text" name="year" id="release-year-input" autocomplete="off" placeholder="ex. 1995">
     <label for="make-input">Make:</label>
-    <input type="text" name="make" id="make-input" autocomplete="off">
+    <input type="text" name="make" id="make-input" autocomplete="off" placeholder="ex. Toyota">
     <label for="model-input">Model:</label>
-    <input type="text" name="model" id="model-input" autocomplete="off">
+    <input type="text" name="model" id="model-input" autocomplete="off" placeholder="ex. Corolla">
     <button type="submit">Add Car</button>
   </form>
 </main>

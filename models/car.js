@@ -13,6 +13,7 @@ const modSchema = new Schema({
 })
 
 const carSchema = new mongoose.Schema({
+  pictureUrl: String,
   boughtFor: String,
   year: String,
   make: String,
