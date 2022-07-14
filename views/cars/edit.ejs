@@ -5,14 +5,16 @@
 <main>
   <h1>Edit the Car</h1>
   <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+    <label for="pictureUrl-input">Picture:</label>
+    <input type="text" name="pictureUrl" id="pictureUrl-input" autocomplete="off" placeholder="Please Insert URL of Car Picture">
     <label for="boughtFor-input">Bought For:</label>
-    <input type="text" name="boughtFor" id="boughtFor-input" autocomplete="off">
+    <input type="text" name="boughtFor" id="boughtFor-input" autocomplete="off" placeholder="<%= car.boughtFor %> ">
     <label for="year-input">Year:</label>
-    <input type="text" name="year" id="release-year-input" autocomplete="off">
+    <input type="text" name="year" id="release-year-input" autocomplete="off" placeholder="<%= car.year %> ">
     <label for="make-input">Make:</label>
-    <input type="text" name="make" id="make-input" autocomplete="off">
+    <input type="text" name="make" id="make-input" autocomplete="off" placeholder="<%= car.make %> ">
     <label for="model-input">Model:</label>
-    <input type="text" name="model" id="model-input" autocomplete="off">
+    <input type="text" name="model" id="model-input" autocomplete="off" placeholder="<%= car.model %> ">
     <button type="submit">Save Car</button>
   </form>
 </main>
