@@ -19,8 +19,11 @@ The following is the link to the [app](https://mo-power.herokuapp.com/) and the 
 
 ## Credits:
 - Background image used on landing page by Chris Hristov at [Unsplash](https://unsplash.com/@itschrisyo).
+- Background image used on index page by Frederik Højfeldt Nielsen at [Unspash](https://unsplash.com/photos/eEpF3zcICfE).
 
 ## Next Steps: 
+- Fix CSS issues with background image and cards.
+- Make a more mobile friendly design.
 - AAU and someone that is signed in, I should be able to see all the cars that someone owns on the show page of their profile.
 - AAU and owner of a mod, I should be able to delete it from my show page.
 - AAU, I should be able to leave comments on the show view of another users build page.
